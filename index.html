@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de la Compra</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <h1>Lista de la Compra</h1>
+        <button id="toggle-mode" title="Modo oscuro/claro"><i class="fa fa-moon"></i></button>
+    </header>
+    <section class="form-section">
+        <form id="product-form">
+            <div>
+                <label for="name">Producto</label>
+                <input type="text" id="name" required>
+            </div>
+            <div>
+                <label for="quantity">Cantidad</label>
+                <input type="number" id="quantity" min="1" required>
+            </div>
+            <div>
+                <label for="category">Categoría</label>
+                <input type="text" id="category">
+            </div>
+            <button type="submit" id="add-btn"><i class="fa fa-plus"></i> Añadir</button>
+        </form>
+    </section>
+    <section class="list-section">
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>Comprar</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="clear-list" class="danger"><i class="fa fa-trash"></i> Borrar lista</button>
+    </section>
+    <section class="charts-section">
+        <canvas id="productChart"></canvas>
+        <canvas id="categoryChart"></canvas>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
